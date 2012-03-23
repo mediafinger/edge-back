@@ -1,0 +1,13 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+
+  %body   
+    - flash.each do |key, value|
+    = content_tag(:div, value, :class => "round flash #{key}")
+          
+    %main
+      = yield
+    
+    / Placed at the end of the document so the pages load faster
+    = javascript_include_tag "application"
