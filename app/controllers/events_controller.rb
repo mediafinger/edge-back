@@ -2,7 +2,13 @@ class EventsController < ActionController::Base
   inherit_resources
 
   def index
-    @events = Event.all
+    searchable_fields = %w(city country year)
+    conditions = []
+    params.each_pair do |key, value|
+      conditions << key << value.humanize     if searchable_fields.include? key
+    end
+
+    @events = Event.find(:all, :conditions => Hash[*conditions.flatten] )
     
     respond_to do |format|
       format.json { render :json => @events }
