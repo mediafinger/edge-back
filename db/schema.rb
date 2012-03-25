@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323035934) do
+ActiveRecord::Schema.define(:version => 20120325051013) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,12 +53,16 @@ ActiveRecord::Schema.define(:version => 20120323035934) do
     t.string   "street"
     t.string   "location"
     t.text     "description"
-    t.datetime "start"
-    t.datetime "end"
     t.integer  "size"
-    t.integer  "audience"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.date     "start_date"
+    t.integer  "start_time_in_halfs", :limit => 6, :default => 18
+    t.date     "end_date"
+    t.integer  "end_time_in_halfs",   :limit => 6, :default => 18
+    t.string   "audience"
+    t.string   "contact"
+    t.string   "website"
   end
 
   add_index "events", ["city"], :name => "index_events_on_city"
