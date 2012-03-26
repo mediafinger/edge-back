@@ -15,4 +15,12 @@ class EventsController < ActionController::Base
     end
   end
 
+  def show
+    @event = Event.find_by_id(params[:id])
+    
+    respond_to do |format|
+      format.json { render :json => @event }
+    end
+  end
+
 end
