@@ -13,6 +13,7 @@ source 'http://rubygems.org'
 
   gem 'activeadmin'
   gem 'country-select'
+  gem 'fabrication',        '~> 1.3'
 
 
 group :production do
@@ -34,7 +35,6 @@ group :development, :test do
 
   # for the tests
   gem 'rspec-rails',        '~> 2.7'
-  gem 'fabrication',        '~> 1.3'
   gem 'ffaker',             '~> 1.13'
 end
 
