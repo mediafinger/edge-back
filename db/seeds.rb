@@ -13,3 +13,5 @@ events = [Fabricate(:event),
           Fabricate(:event, :name => 'Scotland on Rails', :city => 'Edinburgh', :country => 'gb',  :description => 'Cheers', :start_date => 20110623),
           Fabricate(:event, :name => 'Scottish Ruby Conference', :city => 'Edinburgh', :country => 'gb', :description => 'Cheers', :start_date => 20120628)       
          ]
+         
+admin_user = Fabricate(:admin_user)
