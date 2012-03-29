@@ -3,7 +3,7 @@ Fabricator(:event) do
     country               'de'
     city                  'Hamburg'
     street                ''
-    location              'Blau.de'
+    location              ''
     description           'Die Rails User Group trifft sich jeden 2. Dienstag des Monats...'
     start_date            ''
     end_date              ''
