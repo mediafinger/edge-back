@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(:version => 20120329163107) do
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
     t.date     "start_date"
-    t.integer  "start_time_in_halfs", :limit => 6, :default => 18
+    t.integer  "start_time_in_halfs", :limit => 8, :default => 18
     t.date     "end_date"
-    t.integer  "end_time_in_halfs",   :limit => 6, :default => 18
+    t.integer  "end_time_in_halfs",   :limit => 8, :default => 18
     t.string   "audience"
     t.string   "contact"
     t.string   "website"

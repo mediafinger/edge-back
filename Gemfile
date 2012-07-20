@@ -5,6 +5,7 @@ source 'http://rubygems.org'
   gem 'rails',              '3.2.2'
   gem 'thin',               '~> 1.3'
   gem 'foreman',            '~> 0.40'
+  gem 'pg',                 '~> 0.14'
 
   gem 'haml-rails',         '~> 0.3'
   gem 'jquery-rails',       '~> 2.0'
@@ -14,11 +15,7 @@ source 'http://rubygems.org'
   gem 'activeadmin'
   gem 'country-select'
   gem 'fabrication',        '~> 1.3'
-
-
-group :production do
-  gem 'pg'          # ,   '~> 0.13'
-end
+  gem 'awesome_print',      '~> 1.0'
 
 
 group :assets do
@@ -31,7 +28,6 @@ end
 group :development, :test do
   # for development
   gem 'sqlite3',            '~> 1.3'
-  gem 'awesome_print',      '~> 1.0'
 
   # for the tests
   gem 'rspec-rails',        '~> 2.7'
