@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+  - 1.9.3
+gemfile: Gemfile  
+bundler_args: "--without development production" 
+
+env: 
+  - DB=postgresql
+  - DB=sqlite
+
+# matrix:
+#   allow_failures:
+#     - env: DB=postgresql
+
+before_script:
+  - psql -c 'create database events_test' -U postgres
+  - "bundle exec rake db:migrate"
+  - "bundle exec rake db:test:prepare"
+
+script: "bundle exec rspec spec"
+
+# branches:
+#   only:
+#     - master
